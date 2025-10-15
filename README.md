@@ -65,8 +65,9 @@ Portfólio pessoal desenvolvido para demonstrar habilidades técnicas e projetos
 
 ```
 meu-portifolio/
-├── � assets/
+├── 📁 assets/
 │   └── 📁 images/
+│   │   ├── 📄 perfil.jpg
 ├── 📁 styles/
 │   ├── 📄 main.scss
 │   ├── 📄 _variables.scss
@@ -115,8 +116,8 @@ const savedTheme = localStorage.getItem('theme');
 
 **Vania Lucia** - Desenvolvedora Frontend em transição de carreira
 
-- 🔗 **GitHub**: <a href="https://github.com/vaniaaugusto181006" target="_blank">vaniaaugusto181006</a>
-- 💼 **LinkedIn**: <a href="https://www.linkedin.com/in/vania-lucia-755376106/" target="_blank">Vania Lucia</a>
+- 🔗 **GitHub**: <a href="https://github.com/vaniaaugusto181006" target="_blank" rel="noopener noreferrer">vaniaaugusto181006</a>
+- 💼 **LinkedIn**: <a href="https://www.linkedin.com/in/vania-lucia-755376106/" target="_blank" rel="noopener noreferrer">Vania Lucia</a>
 
 ---
 
@@ -134,4 +135,5 @@ Desenvolvido com ❤️ por [Vania Lucia](https://github.com/vaniaaugusto181006)
 
 
 </div>
+
 
