@@ -5,7 +5,7 @@
 [![Responsive](https://img.shields.io/badge/design-responsive-blue)](#)
 [![Dark Mode](https://img.shields.io/badge/theme-dark%20%7C%20light-purple)](#)
 
-[🌐 **Ver Portfólio Online**](#) | [📱 **Demo Mobile**](#) | [💻 **Demo Desktop**](#)
+[🌐 **Ver Portfólio Online**](#)
 
 ---
 
@@ -115,8 +115,8 @@ const savedTheme = localStorage.getItem('theme');
 
 **Vania Lucia** - Desenvolvedora Frontend em transição de carreira
 
-- 🔗 **GitHub**: [vaniaaugusto181006](https://github.com/vaniaaugusto181006)
-- 💼 **LinkedIn**: [Vania Lucia](https://linkedin.com/in/seu-perfil)
+- 🔗 **GitHub**: <a href="https://github.com/vaniaaugusto181006" target="_blank">vaniaaugusto181006</a>
+- 💼 **LinkedIn**: <a href="https://www.linkedin.com/in/vania-lucia-755376106/" target="_blank">Vania Lucia</a>
 
 ---
 
@@ -134,3 +134,4 @@ Desenvolvido com ❤️ por [Vania Lucia](https://github.com/vaniaaugusto181006)
 
 
 </div>
+
