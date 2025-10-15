@@ -5,7 +5,7 @@
 [![Responsive](https://img.shields.io/badge/design-responsive-blue)](#)
 [![Dark Mode](https://img.shields.io/badge/theme-dark%20%7C%20light-purple)](#)
 
-[🌐 **Ver Portfólio Online**](https://seu-portfolio.com) | [📱 **Demo Mobile**](#) | [💻 **Demo Desktop**](#)
+[🌐 **Ver Portfólio Online**](#) | [📱 **Demo Mobile**](#) | [💻 **Demo Desktop**](#)
 
 ---
 
@@ -131,5 +131,6 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 **⭐ Se este projeto te ajudou, considere dar uma estrela!**
 
 Desenvolvido com ❤️ por [Vania Lucia](https://github.com/vaniaaugusto181006)
+
 
 </div>
