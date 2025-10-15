@@ -1,0 +1,52 @@
+.skills {
+    padding: $spacing-xl 0;
+    background: $white;
+
+    .dark-mode & {
+        background: $dark-surface;
+    }
+
+    .skills-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: $spacing-md;
+        max-width: 800px;
+        margin: 0 auto;
+
+        @include respond-to($breakpoint-tablet) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    .skill-card {
+        @include card-style;
+        text-align: center;
+
+        .dark-mode & {
+            background: $dark-bg;
+        }
+
+        .skill-icon {
+            font-size: 3rem;
+            margin-bottom: $spacing-md;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin-bottom: $spacing-sm;
+            color: $text-color;
+
+            .dark-mode & {
+                color: $dark-text;
+            }
+        }
+
+        p {
+            color: $gray-dark;
+
+            .dark-mode & {
+                color: $gray-medium;
+            }
+        }
+    }
+}

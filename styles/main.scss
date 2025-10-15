@@ -1,0 +1,364 @@
+@import 'variables';
+@import 'mixins';
+@import 'header';
+@import 'about';
+@import 'skills';
+@import 'projects';
+@import 'contact';
+@import 'footer';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $font-primary;
+    font-size: $font-size-base;
+    color: $text-color;
+    background: $background-color;
+    line-height: 1.6;
+    transition: $transition;
+    
+    // Prevenir scroll horizontal
+    overflow-x: hidden;
+}
+
+body.dark-mode {
+    background: $dark-bg;
+    color: $dark-text;
+}
+
+.container {
+    @include container;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem; // Menor para mobile
+    font-weight: 600;
+    margin-bottom: $spacing-lg;
+    color: $text-color;
+
+    .dark-mode & {
+        color: $dark-text;
+    }
+    
+    @include respond-to($breakpoint-tablet) {
+        font-size: 2.5rem;
+        margin-bottom: $spacing-xl;
+    }
+}
+
+// Theme Toggle
+.theme-toggle {
+    position: fixed;
+    top: $spacing-md;
+    right: $spacing-md;
+    background: $white;
+    border: 2px solid $gray-light;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 1001;
+    @include flex-center;
+    transition: $transition;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    .moon {
+        display: none;
+    }
+}
+
+body.dark-mode {
+    .theme-toggle {
+        background: $dark-surface;
+        border-color: $gray-dark;
+
+        .sun {
+            display: none;
+        }
+
+        .moon {
+            display: block;
+        }
+    }
+}
+
+// Hero Section - CORRIGIDA
+.hero {
+    @include flex-center(column); // Column para mobile
+    min-height: 100vh;
+    padding: 5rem $spacing-md $spacing-xl; // Espaço para header fixo
+    background: linear-gradient(135deg, $surface-color 0%, $white 100%);
+    gap: $spacing-lg;
+    text-align: center; // Centralizado no mobile
+
+    .dark-mode & {
+        background: linear-gradient(135deg, $dark-bg 0%, $dark-surface 100%);
+    }
+
+    @include respond-to($breakpoint-tablet) {
+        @include flex-center(row);
+        padding: $spacing-xl;
+        text-align: left; // Alinhado à esquerda no desktop
+        gap: $spacing-xl;
+    }
+
+    .hero-content {
+        flex: 1;
+        order: 2; // Texto vem depois da imagem no mobile
+
+        @include respond-to($breakpoint-tablet) {
+            order: 1; // Texto primeiro no desktop
+        }
+
+        h1 {
+            font-size: 2.5rem; // Menor para mobile
+            font-weight: 700;
+            margin-bottom: $spacing-md;
+            line-height: 1.2;
+
+            @include respond-to($breakpoint-tablet) {
+                font-size: 3.5rem;
+            }
+            
+            @include respond-to($breakpoint-desktop) {
+                font-size: 4rem;
+            }
+        }
+
+        .highlight {
+            color: $primary-color;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem; // Ajustado para mobile
+            color: $gray-dark;
+            margin-bottom: $spacing-md;
+            font-weight: 500;
+
+            .dark-mode & {
+                color: $gray-medium;
+            }
+            
+            @include respond-to($breakpoint-tablet) {
+                font-size: 1.5rem;
+            }
+        }
+
+        .hero-description {
+            font-size: 1rem; // Ajustado para mobile
+            margin-bottom: $spacing-lg;
+            color: $gray-dark;
+
+            .dark-mode & {
+                color: $gray-medium;
+            }
+            
+            @include respond-to($breakpoint-tablet) {
+                font-size: 1.1rem;
+            }
+        }
+
+        .hero-buttons {
+            @include flex-center(column);
+            gap: $spacing-sm;
+            
+            .btn {
+                width: 100%; // Botão full width no mobile
+                max-width: 250px;
+                text-align: center;
+                
+                @include respond-to($breakpoint-mobile) {
+                    width: auto;
+                    max-width: none;
+                }
+            }
+
+            @include respond-to($breakpoint-mobile) {
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            @include respond-to($breakpoint-tablet) {
+                justify-content: flex-start;
+            }
+        }
+    }
+
+    .hero-image {
+        flex: 1;
+        @include flex-center;
+        order: 1; // Imagem primeiro no mobile
+
+        @include respond-to($breakpoint-tablet) {
+            order: 2; // Imagem depois no desktop
+        }
+
+        .profile-photo {
+            width: 250px; // Menor para mobile
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid $white;
+            box-shadow: $box-shadow;
+            transition: $transition;
+            cursor: pointer;
+            
+            &:hover {
+                transform: scale(1.05);
+                box-shadow: $shadow-hover;
+            }
+            
+            .dark-mode & {
+                border-color: $dark-surface;
+            }
+            
+            @include respond-to($breakpoint-tablet) {
+                width: 350px;
+                height: 350px;
+            }
+            
+            @include respond-to($breakpoint-desktop) {
+                width: 400px;
+                height: 400px;
+            }
+        }
+    }
+}
+
+// Botões - CORRIGIDOS
+.btn {
+    background-color: $primary-color;
+    color: $white;
+    border: none;
+    padding: $spacing-sm $spacing-lg;
+    border-radius: $border-radius;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: $transition;
+    font-family: $font-primary;
+    text-align: center;
+
+    &:hover {
+        background-color: darken($primary-color, 10%);
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+    
+    // Para mobile
+    @include respond-to($breakpoint-mobile) {
+        width: auto;
+    }
+
+    &-primary {
+        background-color: $primary-color;
+        color: $white;
+
+        &:hover {
+            background-color: darken($primary-color, 10%);
+        }
+    }
+
+    &-secondary {
+        background-color: transparent;
+        color: $primary-color;
+        border: 2px solid $primary-color;
+
+        &:hover {
+            background: $primary-color;
+            color: $white;
+        }
+    }
+}
+
+// ===== ANIMAÇÕES =====
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+// Classes de animação
+.animate-fade-in-up {
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.animate-scale-in {
+    opacity: 0;
+    animation: scaleIn 1s ease 0.5s forwards;
+}
+
+// Delays para sequência
+.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.delay-2 {
+    animation-delay: 0.4s;
+}
+
+.delay-3 {
+    animation-delay: 0.6s;
+}
+
+.delay-4 {
+    animation-delay: 0.8s;
+}
+
+// ===== RESPONSIVIDADE ESPECÍFICA =====
+@media (max-width: 767px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    // Ajustes específicos para mobile
+    .hero-buttons {
+        .btn {
+            width: 100%;
+            max-width: 280px;
+        }
+    }
+    
+    // Garantir que imagens não ultrapassem a tela
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+// Tablet específico
+@media (min-width: 768px) and (max-width: 1023px) {
+    .hero .hero-image .profile-photo {
+        width: 300px;
+        height: 300px;
+    }
+}

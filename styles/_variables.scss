@@ -1,0 +1,38 @@
+// Cores Light Mode
+$primary-color: #6366f1; // Azul Royal
+$secondary-color: #10b981; // Verde Esmeralda
+$text-color: #1f2937; // Cinza escuro
+$background-color: #ffffff; // Branco
+$surface-color: #f9fafb; // Cinza muito claro
+$white: #ffffff;
+$black: #000000;
+$gray-light: #f3f4f6;
+$gray-medium: #d1d5db;
+$gray-dark: #4b5563;
+
+// Cores Dark Mode
+$dark-bg: #111827;
+$dark-surface: #1f2937;
+$dark-text: #f9fafb;
+
+// Tipografia
+$font-primary: 'Poppins', sans-serif;
+$font-size-base: 16px;
+
+// Espaçamentos
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 1.5rem;
+$spacing-lg: 2rem;
+$spacing-xl: 3rem;
+
+// Breakpoints
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
+// Efeitos
+$border-radius: 12px;
+$box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+$shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.1);
+$transition: all 0.3s ease;

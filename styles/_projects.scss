@@ -1,0 +1,120 @@
+.projects {
+    padding: $spacing-xl 0;
+    background: $surface-color;
+
+    .dark-mode & {
+        background: lighten($dark-bg, 5%);
+    }
+
+    .project-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: $spacing-lg;
+
+        @include respond-to($breakpoint-tablet) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include respond-to($breakpoint-desktop) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    .project-card {
+        @include card-style;
+        padding: $spacing-md; // Padding menor para mobile
+
+        .dark-mode & {
+            background: $dark-bg;
+        }
+
+        .project-image {
+            height: 150px; // Altura menor para mobile
+            background: $gray-light;
+            border-radius: $border-radius;
+            @include flex-center;
+            font-size: 3rem; // Ícone menor
+            margin-bottom: $spacing-md;
+
+            .dark-mode & {
+                background: $dark-surface;
+            }
+
+            @include respond-to($breakpoint-tablet) {
+                height: 200px;
+                font-size: 4rem;
+            }
+        }
+
+        .project-content {
+            h3 {
+                font-size: 1.2rem; // Fonte menor para mobile
+                margin-bottom: $spacing-sm;
+                color: $text-color;
+
+                .dark-mode & {
+                    color: $dark-text;
+                }
+
+                @include respond-to($breakpoint-tablet) {
+                    font-size: 1.3rem;
+                }
+            }
+
+            p {
+                color: $gray-dark;
+                margin-bottom: $spacing-md;
+                font-size: 0.9rem; // Fonte menor para mobile
+
+                .dark-mode & {
+                    color: $gray-medium;
+                }
+
+                @include respond-to($breakpoint-tablet) {
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        .project-tech {
+            display: flex;
+            gap: $spacing-sm;
+            margin-bottom: $spacing-md;
+            flex-wrap: wrap;
+
+            span {
+                background: $primary-color;
+                color: $white;
+                padding: 0.25rem $spacing-sm;
+                border-radius: 20px;
+                font-size: 0.7rem; // Fonte menor para mobile
+                font-weight: 500;
+
+                @include respond-to($breakpoint-tablet) {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+
+        .project-links {
+            display: flex;
+            gap: $spacing-md;
+
+            @include respond-to($breakpoint-mobile) {
+                flex-direction: column;
+                gap: $spacing-sm;
+            }
+
+            .project-link {
+                color: $primary-color;
+                text-decoration: none;
+                font-weight: 500;
+                transition: $transition;
+
+                &:hover {
+                    color: darken($primary-color, 10%);
+                }
+            }
+        }
+    }
+}

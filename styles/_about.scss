@@ -1,0 +1,103 @@
+.about {
+    padding: $spacing-xl 0;
+    background: $surface-color;
+
+    .dark-mode & {
+        background: lighten($dark-bg, 5%);
+    }
+
+    .about-content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .text-box {
+        background: $white;
+        border-radius: $border-radius;
+        padding: $spacing-xl;
+        box-shadow: $box-shadow;
+        border-left: 5px solid $primary-color;
+        transition: $transition;
+        
+        .dark-mode & {
+            background: $dark-surface;
+        }
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: $shadow-hover;
+        }
+
+        h3 {
+            color: $text-color;
+            margin-bottom: $spacing-md;
+            font-size: 1.5rem;
+            
+            .dark-mode & {
+                color: $dark-text;
+            }
+        }
+
+        p {
+            margin-bottom: $spacing-md;
+            color: $gray-dark;
+            
+            .dark-mode & {
+                color: $gray-medium;
+            }
+        }
+    }
+
+    .button-list {
+        display: grid;
+        grid-template-columns: 1fr; // 1 coluna no mobile
+        gap: $spacing-sm;
+        margin-top: $spacing-lg;
+
+        @include respond-to($breakpoint-mobile) {
+            grid-template-columns: repeat(2, 1fr); // 2 colunas a partir de 480px
+        }
+
+        @include respond-to($breakpoint-tablet) {
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); // Auto-fit para tablet+
+        }
+    }
+
+    .skill-button {
+        background: linear-gradient(to right, $primary-color, darken($primary-color, 10%));
+        color: $white;
+        border: none;
+        padding: $spacing-sm $spacing-md;
+        border-radius: 50px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: $transition;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba($primary-color, 0.3);
+        
+        &::before {
+            content: '✅';
+            margin-right: 8px;
+            font-size: 1.1rem;
+        }
+
+        &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba($primary-color, 0.4);
+            background: linear-gradient(to right, darken($primary-color, 5%), darken($primary-color, 15%));
+        }
+
+        &:active {
+            transform: translateY(1px);
+        }
+
+        // Ajuste para textos longos em mobile
+        @include respond-to($breakpoint-mobile) {
+            font-size: 0.9rem;
+            padding: $spacing-xs $spacing-sm;
+        }
+    }
+}

@@ -1,0 +1,78 @@
+.contact {
+    padding: $spacing-xl 0;
+    background: $white;
+
+    .dark-mode & {
+        background: $dark-surface;
+    }
+
+    .contact-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: $spacing-xl;
+        max-width: 1000px;
+        margin: 0 auto;
+
+        @include respond-to($breakpoint-tablet) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    .contact-info {
+        p {
+            font-size: 1.1rem;
+            margin-bottom: $spacing-lg;
+            color: $gray-dark;
+
+            .dark-mode & {
+                color: $gray-medium;
+            }
+        }
+    }
+
+    .contact-links {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-md;
+    }
+
+    .contact-link {
+        color: $primary-color;
+        text-decoration: none;
+        font-weight: 500;
+        transition: $transition;
+
+        &:hover {
+            color: darken($primary-color, 10%);
+        }
+    }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-md;
+
+        input, textarea {
+            padding: $spacing-sm;
+            border: 2px solid $gray-light;
+            border-radius: $border-radius;
+            font-family: $font-primary;
+            transition: $transition;
+
+            .dark-mode & {
+                background: $dark-bg;
+                border-color: $gray-dark;
+                color: $dark-text;
+            }
+
+            &:focus {
+                outline: none;
+                border-color: $primary-color;
+            }
+        }
+
+        button {
+            align-self: flex-start;
+        }
+    }
+}

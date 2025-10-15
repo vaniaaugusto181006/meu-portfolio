@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vania Lucia | Dev Front End</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Toggle Dark Mode -->
+    <button class="theme-toggle" aria-label="Alternar modo escuro">
+        <span class="sun">☀️</span>
+        <span class="moon">🌙</span>
+    </button>
+
+    <!-- Cabeçalho -->
+    <header class="header">
+        <nav>
+            <div class="logo">Vani Lucia</div>
+            <ul class="nav-list">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+            <div class="menu-toggle">☰</div>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+  <!-- Hero Section  -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h1 class="animate-fade-in-up">Olá, eu sou a <span class="highlight">Vania Lucia</span></h1>
+        <p class="hero-subtitle animate-fade-in-up delay-1">Desenvolvedora Front End</p>
+        <p class="hero-description animate-fade-in-up delay-2">Criando experiências digitais modernas e responsivas</p>
+        <div class="hero-buttons animate-fade-in-up delay-3">
+            <a href="#projects" class="btn btn-primary">Ver Projetos</a>
+        </div>
+    </div> 
+    <div class="hero-image animate-scale-in">
+        <img src="assets/images/perfil.jpg" alt="Vania Lucia" class="profile-photo">
+    </div>
+</section>
+
+     <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Sobre Mim</h2>
+            <div class="about-content">
+                <div class="text-box">
+                    <p>
+                        Sou <strong>Vania Lucia</strong>, uma desenvolvedora front-end em transição de carreira, 
+                        apaixonada por criar interfaces modernas e funcionais. Aos 39 anos, trago comigo 
+                        uma bagagem de experiências que enriquecem minha visão sobre design e usabilidade.
+                    </p>
+                    <p>
+                        Minha jornada na tecnologia começou como uma curiosidade e rapidamente se 
+                        transformou em paixão. Atualmente, me dedico ao estudo de 
+                        <strong>HTML, CSS, JavaScript, React</strong> e <strong>SASS</strong>, 
+                        sempre buscando as melhores práticas e tendências do mercado.
+                    </p>
+                    
+                    <div class="button-list">
+                        <button class="skill-button">HTML5</button>
+                        <button class="skill-button">CSS3</button>
+                        <button class="skill-button">SASS</button>
+                        <button class="skill-button">JAVASCRIPT</button>
+                        <button class="skill-button">GIT</button>
+                        <button class="skill-button">FIGMA</button>
+                        <button class="skill-button">React</button>
+                        <button class="skill-button">TypeScript</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+        <!-- Projetos -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title">Projetos Recentes</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <div class="project-image">💻</div>
+                        <div class="project-content">
+                            <h3 class="project-title">E-commerce Moderno</h3>
+                            <p class="project-description">Plataforma de e-commerce com carrinho dinâmico, filtros e design responsivo.</p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>SASS</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">🎨</div>
+                        <div class="project-content">
+                            <h3 class="project-title">Task Manager App</h3>
+                            <p class="project-description"> Aplicativo de gerenciamento de tarefas com drag & drop e armazenamento local.</p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>SASS</span>
+                                <span>JavaScript</span>
+                                <span>LocalStorage</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">🖥️</div>
+                        <div class="project-content">
+                            <h3 class="project-title">Weather Dashboard</h3>
+                            <p class="project-description">Dashboard climático com previsões em tempo real e interface intuitiva.</p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>SASS</span>
+                                <span>JavaScript</span>
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
+                <div class="all-projects" style="display: flex; align-items: center; justify-content: flex-end; gap: 1rem; margin-top: 2rem;">
+                    <p>Interessado em ver mais projetos?</p>
+                    <a href="https://github.com/vaniaaugusto181006?tab=repositories" class="btn" target="_blank">Ver Todos no GitHub</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Vamos Conversar?</h2>
+                <div class="contact-content" style="display: flex; justify-content: center;">
+                    <div class="contact-info">
+                        <p>Estou sempre aberta a novas oportunidades e projetos interessantes.</p>
+                        <div class="contact-links" style="flex-direction: row; justify-content: center;">
+                            <a href="https://github.com/vaniaaugusto181006" class="contact-link">
+                                <img src="https://img.icons8.com/?size=100&id=SzgQDfObXUbA&format=png&color=000000" height="20rem" alt="GitHub"> GitHub
+                            </a>
+                            <a href="https://www.linkedin.com/in/vania-lucia-755376106/" class="contact-link">
+                                <img src="https://img.icons8.com/?size=100&id=xuvGCOXi8Wyg&format=png&color=000000" height="20rem" alt=""> LinkedIn
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Vania Lucia. Todos os direitos reservados.</p>
+            <div class="footer-credits">
+                <span>Feito com ❤️ e ☕</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
